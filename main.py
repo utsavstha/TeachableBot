@@ -6,6 +6,10 @@ app = Flask(__name__)
 def cancel():
     getEmails(request.json)
     return Response(status=200)
+    
+@app.route("/")
+def index():
+    return "Hello World!"
 
 @app.route('/transaction_refund', methods=['POST'])
 def refund():
