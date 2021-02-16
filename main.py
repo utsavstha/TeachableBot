@@ -29,3 +29,6 @@ def getEmails(jsonData):
         user = obj["user"]
         emails.append(user["email"])
     return emails
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
